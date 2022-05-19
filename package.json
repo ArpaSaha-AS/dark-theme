@@ -1,0 +1,30 @@
+{
+  "name": "vscode-theme-generator",
+  "version": "0.2.1",
+  "description": "Easily generate themes for VS Code with only a few colors",
+  "main": "dist/index.js",
+  "scripts": {
+    "watch": "tsc -w",
+    "build": "tsc",
+    "prestart": "tsc demo/generate.ts",
+    "start": "node demo/generate.js",
+    "prepublish": "npm run build",
+    "lint": "tslint src/*.ts"
+  },
+  "author": "Tyriar",
+  "license": "MIT",
+  "typescript": {
+    "definition": "index.d.ts"
+  },
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts"
+  ],
+  "typings": "dist/index",
+  "devDependencies": {
+    "@types/node": "^14.14.21",
+    "tslint": "^5.9.1",
+    "tslint-consistent-codestyle": "^1.13.0",
+    "typescript": "^4.1.3"
+  }
+}
